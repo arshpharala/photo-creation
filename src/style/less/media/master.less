@@ -1,0 +1,236 @@
+@size-md :~"(min-width : 768px)"; // 768
+@size-lg :~"(min-width : 1024px)"; // 1024
+@size-xl :~"(min-width : 1366px)"; //1366
+@size-xll :~"(min-width : 1500px)"; // 1500
+@size-xlll :~"(min-width : 1600px)"; // 1600
+@size-xllll: ~"(min-width : 1900px)"; // 1900
+
+@media @size-md {
+
+  // Start Basics
+  section {
+    padding: @sectionPadding-md;
+  }
+  // End Basics
+
+    // Start Banner Section
+    .banner {
+      .logo-container {
+        padding: 1rem 2rem;
+
+        .active {
+          &+.menu-links {
+            width: 50%;
+            background-color: white;
+          }
+        }
+      }
+      .menu-links{
+        .links-li {
+       
+          .dropdown{
+            position: static !important;
+        }
+          
+        }        
+      }
+    }
+    // End Banner Section
+    
+    // Start Services Section
+    .services-list{
+      .services-item{
+        width: 50%;
+      }
+  }
+  // End Services Section
+  .new-project{
+    .project-inner{
+      gap: 40px;
+    }
+    .heading{
+      width: 38%;
+      margin-top: 2rem;
+    }
+    .content{
+      width: 60%;
+    }
+}
+.vision{
+  .vision-item{
+    width: 30%;
+  }
+}
+
+.blogs{
+  ul{
+      max-width: 100%;
+      li{
+        padding: 0 15px;
+        h4{ 
+          margin: 15px 0;
+      }
+      p{
+        margin-top:15px;
+        font-size: 14px;
+    }
+    }
+  }
+  
+ 
+
+}
+
+.footer {
+  .footer-inner{
+    justify-content: space-between;
+  }
+  .footer-items {
+    width: 22%;
+    &:first-child{
+      width: 40%;
+    }
+    &:last-child{
+      width: 30%;
+    }
+  }
+}
+}
+
+@media @size-lg {
+
+  // Start Basics
+  p,
+  li {
+    line-height: 1.8;
+  }
+  // End Basics   
+
+    // Start Heading 
+    .heading {
+      h2 {
+        font-size: 28px;
+      }
+    }
+    // End Heading
+    
+
+    // Start Banner Section
+    .banner {
+      h1{
+        font-size: 60px;
+      }
+      .logo-container {
+        box-shadow: none;
+
+        .menu,
+        .menu-toggle {
+          display: none;
+        }
+
+        .logo {
+          max-width: 70px;
+        }
+
+        .menu-links {
+          display: flex;
+          position: relative;
+          width: auto;
+          background-color: transparent;
+          box-shadow: none;
+
+          ul {
+            display: flex;
+            align-items: center;
+          }
+
+          .links-li {
+            border-bottom: 0;
+            padding: 0;
+            margin-right: 40px;
+          
+          }
+          
+        }
+
+
+      }
+      
+    }
+    // End Banner Section
+    // Start Services Section
+    .services-list{
+      .services-item{
+        width: 33.3%;
+      }
+  }
+  // End Services Section
+
+  .new-project{
+    .content,  .heading{
+      width: 48%;
+    }
+}
+.footer {
+  .footer-inner {
+  padding: 42px 32px;
+  }
+}
+}
+
+@media @size-xl {
+
+  // Start Basics
+  .container {
+    max-width: 1370px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: @sectionPadding-xl;
+  }
+  // End Basics
+
+  .heading{
+    font-size: 40px;
+}
+
+    // Start Banner Section
+    .banner {
+      .logo-container {
+        padding: .8rem 0 !important;
+
+        .menu-links {
+          ul {
+            .links-li {
+              &:nth-of-type(4) {
+                display: flex;
+              }
+            
+
+             
+            }
+          }
+        
+        }
+      }
+      .banner-container{
+        padding:80px 60px;
+      }
+
+      
+    }
+    // End Banner Section
+
+    .new-project{
+      .project-inner{
+          padding: 90px 60px 0 60px;
+      }
+  }
+}
+
+@media @size-xll {
+
+  // .taxi { 
+  // }
+}
