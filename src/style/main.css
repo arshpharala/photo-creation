@@ -577,7 +577,7 @@ section {
   margin: auto;
 }
 .blogs ul li {
-  width: 33%;
+  max-width: 100%;
   padding: 0 25px;
 }
 .blogs ul li .blogdate {
@@ -668,10 +668,8 @@ section {
   .vision .vision-item {
     width: 30%;
   }
-  .blogs ul {
-    max-width: 100%;
-  }
   .blogs ul li {
+    width: 33%;
     padding: 0 15px;
   }
   .blogs ul li h4 {
@@ -732,7 +730,7 @@ section {
     margin-right: 40px;
   }
   .services-list .services-item {
-    width: 33.3%;
+    width: 25%;
   }
   .new-project .content,
   .new-project .heading {
