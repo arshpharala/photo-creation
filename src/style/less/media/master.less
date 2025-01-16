@@ -1,9 +1,13 @@
+@size-sm : ~"(min-width : 320px)"; //375
 @size-md :~"(min-width : 768px)"; // 768
 @size-lg :~"(min-width : 1024px)"; // 1024
 @size-xl :~"(min-width : 1366px)"; //1366
 @size-xll :~"(min-width : 1500px)"; // 1500
 @size-xlll :~"(min-width : 1600px)"; // 1600
 @size-xllll: ~"(min-width : 1900px)"; // 1900
+
+
+
 
 @media @size-md {
 
@@ -81,6 +85,26 @@
  
 
 }
+.blog-info{
+  .blog-container{
+    display: flex
+;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .info-content{
+    width: 60%;
+  }
+  .info-right{
+    width: 40%;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+  }
+}
+
+
+
 
 .footer {
   .footer-inner{
@@ -95,6 +119,13 @@
       width: 30%;
     }
   }
+}
+.info-list{
+flex-flow: wrap;
+justify-content: space-between;
+&>div{
+  width: 47%;
+}
 }
 }
 
@@ -115,6 +146,18 @@
     }
     // End Heading
     
+    // Start form
+    form{
+      flex-flow: wrap;
+      justify-content: space-between;
+      textarea{
+          width: 100%;
+      }
+      input{
+        width: 48.5%;
+      }
+  }
+    // ENd form
 
     // Start Banner Section
     .banner {
@@ -172,9 +215,116 @@
       width: 48%;
     }
 }
+.blogs{
+  ul{
+    padding: 0 25px;
+  }
+}
+
+
+.aboutus .banner-container {
+  padding: 120px 30px;
+  .content{    
+    p{
+      color: #000000;
+    }
+  }
+}
+
+//What we do
+.detailbanner{
+  
+  .content{
+      h1{
+          color: #000000;
+      }
+  }
+}
+.whatwedo{
+.create-project{     
+  grid-template-columns: 33% 33% 33%;
+    .heading{
+      justify-content: center;
+      padding: 50px 0;
+      h2{          
+        font-size: 50px;
+      }
+    }
+    .newproject{
+      padding: 50px;  
+      h3{
+        font-size: 35px;
+        margin: 20px 0;
+      }
+      a{          
+        margin-top: 30px;
+      }
+    }
+    .stats-details{
+     
+      .stat-item{          
+        padding: 0 36px;
+      }
+    }
+}
+.skills{
+  .progress-section{
+    width: 80%;
+    margin: 8rem auto;
+    .progress-label {
+      font-size: 17px;
+    }
+  }
+}
+}
+
+.bannerdetail{
+  .whatwedo{        
+    flex-direction: row;
+    .left-project{
+      width: 48%;
+      padding: 42px;
+      padding-bottom: 0;
+      h2{
+        font-size: 35px;
+      }
+    }
+    .right-project{      
+      width: 50%;
+      .project{
+        width: 80%;
+        padding: 38px 50px 0 50px;
+        h2{
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+.contactdetail{
+  padding-bottom: 6rem;
+  .whatwedo{
+      .contact-bg {
+        padding: 40px 25px;
+        width: 50%;
+        margin-top: 0;
+      }
+  } 
+}
+
 .footer {
   .footer-inner {
   padding: 42px 32px;
+  }
+}
+// blog
+.blog{
+  .banner-container {
+      .content{
+          p{
+              color: #000000;
+          }
+      }
   }
 }
 }
@@ -228,6 +378,15 @@
           padding: 90px 60px 0 60px;
       }
   }
+  
+.blog-info{
+  .info-content{
+    width: 65%;
+  }
+  .info-right{
+    width: 30%;
+  }
+}
 }
 
 @media @size-xll {
