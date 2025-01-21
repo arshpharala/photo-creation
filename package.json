@@ -1,24 +1,19 @@
 {
-  "name": "less-compiler",
-  "version": "1.0.0",
-  "description": "compile less with gulp automate process using watch command",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"nothing is default\" "
-  },
-  "author": "Navdeep Dhami",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-debug": "^4.0.0",
-    "gulp-less-changed": "^1.4.2",
-    "gulp-watch-less": "^1.0.1"
-  },
-  "dependencies": {
-    "gulp-install": "^1.1.0",
-    "gulp-less": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "rename": "^1.0.4"
-  }
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "axios": "^1.6.4",
+        "bootstrap": "^5.2.3",
+        "laravel-vite-plugin": "^1.0.0",
+        "sass": "^1.56.1",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "gulp": "^5.0.0"
+    }
 }

@@ -1,0 +1,17 @@
+.onoffswitch{width:90px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;float:right;}
+.onoffswitch-checkbox{position:absolute;opacity:0;pointer-events:none;float:right;}
+.onoffswitch-label{display:block;overflow:hidden;cursor:pointer;border:2px solid #999999;border-radius:20px;}
+.onoffswitch-inner{display:block;width:200%;margin-left:-100%;transition:margin .3s ease-in 0s;}
+.onoffswitch-inner:before,.onoffswitch-inner:after{display:block;float:left;width:50%;height:20px;padding:0;line-height:22px;font-size:14px;color:white;font-family:Trebuchet,Arial,sans-serif;font-weight:bold;box-sizing:border-box;}
+.onoffswitch-inner:before{content:"ON";padding-left:10px;text-align:left;background-color:#34A7C1;color:#FFFFFF;}
+.onoffswitch-inner:after{content:"OFF";padding-right:10px;background-color:#EEEEEE;color:#999999;text-align:right;}
+.onoffswitch-switch{display:block;
+    width: 20px;
+    margin-top: 31px;
+    margin-right: 17px;
+    margin-bottom: 9px;
+height: 14px;
+    background:#FFFFFF;
+    position:absolute;top:0;bottom:0;right:56px;border:2px solid #999999;
+    border-radius:20px;transition:all .3s ease-in 0s}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner{margin-left:0;}.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch{right:0}.popular{float:right;}
