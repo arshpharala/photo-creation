@@ -7,6 +7,7 @@ use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\ThanksController;
 use App\Http\Controllers\PermissionController;
 use App\Models\Role;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,12 @@ use App\Models\Role;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('test', function(){
+    $user = User::first();
+    $user->password = bcrypt('Pa$$w0rd');
+    $user->save();
+});
 
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('home');

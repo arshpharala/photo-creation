@@ -7,6 +7,19 @@ use App\Models\PageDetail;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
+if (! function_exists('public_path')) {
+    /**
+     * Get the path to the public directory.
+     *
+     * @param  string  $path
+     * @return string
+     */
+    function public_path($path = '')
+    {
+        return base_path('public_html') . ($path ? DIRECTORY_SEPARATOR . $path : $path);
+    }
+}
+
 
 if(!function_exists('summernote_replace')){
     function summernote_replace($content){
@@ -35,12 +48,12 @@ if (!function_exists('encodeUrlSlug')) {
         {
 
 
-             
+
                $url = request()->url();
-               
+
                if(Str::contains($url,'home'))
                {
-                   
+
                     $page_name =  'home';
                }
                 elseif(Str::contains($url,'about'))
@@ -64,7 +77,7 @@ if (!function_exists('encodeUrlSlug')) {
                   $page_name='home';
                }
 
-             
+
 
              $pageDetail =   PageDetail::where(['page_name' => $page_name, 'section' => 'metas'])->get();
              $data=$pageDetail->where('sub_section', 'title')->first()->heading;
@@ -76,26 +89,25 @@ if (!function_exists('encodeUrlSlug')) {
 
     if (!function_exists('bannerDetails')) {
 
-    
+
 
         function bannerDetails()
         {
-            
+
              $banners=Banner::take('4')->get();
             return $banners;
         }
     }
 
-    
+
     if (!function_exists('websiteDetail')) {
 
-    
+
 
         function websiteDetail()
         {
-            
+
              $website=Website::first();
             return $website;
         }
     }
- 
